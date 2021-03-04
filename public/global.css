@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+html, body {
+    background-color: #101010;
+    color: #D4D4D4;
+    font-family: 'Montserrat';
+    width: 99%;
+    height: 99%;
+    position:absolute;
+    z-index:1;
+    top:0px;
+    left:0px;
+    margin: none;
+    padding: none;
+    overflow: hidden;
+}
+#chat-container{
+    float: right;
+    max-width: 21vw;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 0 2rem;
+    height: 66em;
+}
+.card{
+    padding: 1rem;
+    border: #ccc 1px solid;
+    margin: 0.7rem 0;
+    min-height: 80vh;
+    word-wrap: break-word;
+}
+#submit{
+    position: relative;
+    top: 95vh;
+    left: 75.8vw;
+}
+button{
+    margin-top: 1em;
+    display: block;
+    border: solid grey;
+    border-width: 1px 1px;
+    border-radius: 0;
+    background: white;
+    color: black;
+    font-family: Montserrat;
+    position: absolute;
+    bottom: 10px;
+    background: #1f1f1f;
+    color: #D4D4D4;
+}
+input, textarea{
+    position: absolute;
+    background: #1f1f1f;
+    color: #D4D4D4;
+    font-family: Montserrat;
+}
