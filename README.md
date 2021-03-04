@@ -11,4 +11,4 @@ Start:
 ```bash
 npm run start
 ```
-By default hosts on port 8080.
+By default hosts on port 80.
