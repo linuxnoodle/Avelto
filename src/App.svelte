@@ -18,7 +18,7 @@
 
     <div id="submit">
         <form action="#" onsubmit="return false">
-            <input style="max-width:19vw; width:100%; bottom:4vh; left: 0px;" id="messageInput" placeholder="Message {username}" type="text" maxlength="55" bind:value={messageText}/>                  
+            <input style="max-width:19vw; width:100%; bottom:4vh; left: 0px;" id="messageInput" placeholder="Message {username}" type="text" maxlength="100" bind:value={messageText}/>                  
             <button on:click|preventDefault={sendMessage}>send</button>          
         </form>                                                     
     </div>
@@ -44,7 +44,6 @@
 
     socket.on("newMessage", (message) => {
         drawMessage(message.username + ": " + message.content);
-        messageContainer.appendChild(element);    
     });
 
     socket.on("previousMessages", (messages) => {
