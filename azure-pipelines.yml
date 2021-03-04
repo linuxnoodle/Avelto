@@ -12,10 +12,7 @@ variables:
   azureSubscription: '226e3fef-5841-4c1d-b15a-ab6cdebddbb1'
 
   # Web app name
-  webAppName: ''
-
-  # Environment name
-  environmentName: ''
+  webAppName: 'Avelto'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
