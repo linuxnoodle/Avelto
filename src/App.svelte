@@ -55,6 +55,7 @@
     }
 
     function sendMessage(){
+        if (messageText.replace(/\s/g,'') == "") return;    
         drawMessage(username + ":  " + messageText);
         socket.emit("addMessage", username, messageText);
         messageText = "";
