@@ -1,4 +1,4 @@
-{#if !loggedIn}
+{#if !loggedIn && document.cookie == ""}
     <form action="#" onsubmit="return false">
         <input bind:value={username} class="form-control" placeholder="Username" id="userName" style="left:0.05vw; bottom:4vh;">
         <button on:click={login}>login</button>
@@ -24,8 +24,8 @@
     </div>
 {/if}
 <script>
-    let socket = io("ws://linuxnoodle-46718.portmap.io:46718");
-    let username = "";
+    let socket = io("ws://localhost:3000");
+    let username = document.cookie;
     let loggedIn = false;
 
     let projectContainer;
@@ -46,6 +46,7 @@
 
     function login(){
         socket.emit("login", username);
+        document.cookie = username;
         loggedIn = true;
     }
 
