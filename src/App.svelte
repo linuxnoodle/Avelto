@@ -33,6 +33,11 @@
 
     let messageText = "";
 
+    let messageCount = 0;
+    setInterval(() => {
+        messageCount = 0;    
+    }, 5000);
+    
     if (document.cookie != ""){
         login();
     }
@@ -55,10 +60,11 @@
     }
 
     function sendMessage(){
-        if (messageText.replace(/\s/g,'') == "") return;    
+        if (messageText.replace(/\s/g,'') == "" || messageCount > 3) return;    
         drawMessage(username + ":  " + messageText);
         socket.emit("addMessage", username, messageText);
         messageText = "";
+        ++messageCount;
     }
 
     function drawMessage(content){
