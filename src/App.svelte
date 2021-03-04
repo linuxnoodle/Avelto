@@ -65,6 +65,7 @@
         socket.emit("addMessage", username, messageText);
         messageText = "";
         ++messageCount;
+        messageContainer.scrollIntoView({behavior:"smooth", block:"end"});    
     }
 
     function drawMessage(content){
