@@ -33,6 +33,10 @@
 
     let messageText = "";
 
+    if (document.cookie != ""){
+        login();
+    }
+
     socket.on("newMessage", (message) => {
         drawMessage(message.username + ": " + message.content);
         messageContainer.appendChild(element);    
