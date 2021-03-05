@@ -1,7 +1,6 @@
 # Avelto
 Svelte + socket.io app that allows you to manage projects with other people.
 ## Host your own instance
-Requires node + npm, pm2, express, socket.io
 Install dependencies:
 ```bash
 cd Avelto/
@@ -12,4 +11,4 @@ Start:
 ```bash
 npm run start
 ```
-By default hosts on port 80.
+By default hosts on port 3000.
