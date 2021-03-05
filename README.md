@@ -6,7 +6,8 @@ Install dependencies:
 ```bash
 cd Avelto/
 npm i
-```
+npm run build```
+
 Start:
 ```bash
 npm run start

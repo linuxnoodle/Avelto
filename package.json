@@ -5,7 +5,9 @@
     "build": "rollup -c",
     "dev": "nodemon server.js",
     "start": "pm2 start server.js",
-    "stop": "pm2 delete server"
+    "restart": "pm2 restart server",
+    "stop": "pm2 stop server",
+    "delete": "pm2 delete server"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
